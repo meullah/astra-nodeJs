@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Product</title>
+  </head>
+  <body>
+    <h2>Add New Product</h2>
+    <form
+      action="/new-product"
+      enctype="multipart/form-data"
+      method="POST"
+      id="productsForm"
+    >
+      <label for="pname">Product name:</label>
+      <input
+        type="text"
+        id="pname"
+        name="pname"
+        placeholder="product name here ..."
+        required
+      /><br /><br />
+      <label for="price">Product Price:</label>
+      <input
+        type="text"
+        id="price"
+        name="price"
+        placeholder="price here ..."
+        required
+      /><br /><br />
+      <label for="desc">Product Desc:</label>
+      <textarea
+        id="desc"
+        name="desc"
+        form="productsForm"
+        placeholder="Enter product desc here..."
+        required
+      ></textarea>
+      <br />
+      <br />
+      <label for="prductImage">Product Image: </label
+      ><input required type="file" id="prductImage" name="prductImage" />
+      <br />
+      <br />
+      <button onclick="window.location='/'" style="color: red">cancel</button>
+      <input
+        type="submit"
+        value="Add This Product"
+        style="background-color: rgb(176, 224, 176)"
+      />
+    </form>
+  </body>
+</html>
